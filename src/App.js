@@ -10,7 +10,6 @@ import WatchPage from "./Screens/WatchPage";
 import Login from "./Screens/Login";
 import Register from "./Screens/Register";
 import { useEffect, useState } from "react";
-import Spinner from "./Components/Spinner";
 import Profile from "./Screens/Dashboard/Profile";
 import "aos/dist/aos.css";
 import Password from "./Screens/Dashboard/Password";
@@ -19,7 +18,6 @@ import ViewMore from "./Components/ViewMore";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  console.log(loading);
   useEffect(() => {
     window.addEventListener("load", () => {
       setLoading(false);
@@ -28,31 +26,28 @@ function App() {
 
   return (
     <>
-      {loading && <Spinner loading={loading} />}
-      {!loading && (
-        <>
-          <ScrollTop />
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/home" element={<HomeScreen />} />
-            <Route path="/movies" element={<Movies />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/404Error" element={<NotFound />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/password" element={<Password />} />
-            <Route path="/favourite" element={<FavouriteMovies />} />
-            <Route path="/viewMore" element={<ViewMore />} />
+      <>
+        <ScrollTop />
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/home" element={<HomeScreen />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/404Error" element={<NotFound />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/password" element={<Password />} />
+          <Route path="/favourite" element={<FavouriteMovies />} />
+          <Route path="/viewMore" element={<ViewMore />} />
 
-            <Route path="/movies/:id" element={<SingleMovie />} />
-            <Route path="/watch/:id" element={<WatchPage />} />
+          <Route path="/movies/:id" element={<SingleMovie />} />
+          <Route path="/watch/:id" element={<WatchPage />} />
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </>
-      )}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </>
     </>
   );
 }
