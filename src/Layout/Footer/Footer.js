@@ -34,16 +34,16 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2 lg:col-span-3">
             <Link to="/">
               <img
-                src="image/fixedLogo.png"
+                src="/image/fixedLogo.png"
                 alt="logo"
                 className="object-contain w-2/4"
               />
             </Link>
             <p className="mt-3 text-sm leading-7 text-border space-y-1">
-              <div>Main Street- 12,</div>
-              <div>Myanmar,Nay Pyi Taw</div>
-              <div>Tell +959 11100011010</div>
-              <div>Email: info@moviehv.com</div>
+              <span className="block">Main Street- 12,</span>
+              <span className="block">Myanmar,Nay Pyi Taw</span>
+              <span className="block">Tell +959 11100011010</span>
+              <span className="block">Email: info@moviehv.com</span>
             </p>
           </div>
         </div>

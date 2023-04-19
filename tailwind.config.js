@@ -16,6 +16,8 @@ module.exports = {
       fontSize: { h1: "2.6rem" },
       screens: {
         xs: "475px",
+        xl3: "1800px",
+        xl4: "2100px",
       },
     },
   },

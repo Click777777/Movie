@@ -1,7 +1,7 @@
 import React from "react";
 
 const Promos = () => {
-  return <div>Promos</div>;
+  return <div></div>;
 };
 
 export default Promos;

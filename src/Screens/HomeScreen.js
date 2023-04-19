@@ -1,19 +1,19 @@
 import React from "react";
-import Banner from "../Components/Home/Banner";
-import PopularMovies from "../Components/Home/PopularMovies";
-import Promos from "../Components/Home/Promos";
-import TopRated from "../Components/Home/TopRated";
+import UpcomingMovie from "../Components/Home/Upcoming/UpcomingMovie";
+import TopRated from "../Components/Home/TopRated/TopRated";
 import Footer from "../Layout/Footer/Footer";
 import Layout from "../Layout/Layout";
+import Banner from "../Components/Home/Banner/Banner";
+import Promos from "../Components/Home/Promo/Promos";
 
 const HomeScreen = () => {
   return (
     <Layout>
       <div className="w-full bg-main min-h-screen mb-6 ">
         <Banner />
-        <PopularMovies />
-        <Promos />
+        <UpcomingMovie />
         <TopRated />
+        <Promos />
         <div className="w-full hidden lg:inline-block">
           <Footer></Footer>
         </div>

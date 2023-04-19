@@ -1,8 +1,9 @@
 import React from "react";
 import Layout from "../Layout/Layout";
 import Footer from "../Layout/Footer/Footer";
-import Head from "../Components/Home/Head";
 import { FiPhoneCall, FiMapPin, FiMail } from "react-icons/fi";
+import sukuna from "../assist/My project-2.png";
+import Head from "../Components/Head";
 
 const ContactUs = () => {
   const data = [
@@ -30,8 +31,9 @@ const ContactUs = () => {
   ];
   return (
     <Layout>
-      <div className="min-h-screen container mx-auto px-2 my-6">
-        <Head title="Contact Us"></Head>
+      <div className="min-h-screen container mx-auto px-2 pt-20">
+        <Head title="Contact Us" image={sukuna}></Head>
+
         <div className="grid gap-6 my-10 md:grid-cols-2 lg:grid-cols-3 lg:my-20 xl:gap-8">
           {data.map((i) => (
             <div

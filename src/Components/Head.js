@@ -1,10 +1,10 @@
 import React from "react";
 
-const Head = ({ title }) => {
+const Head = ({ title, image }) => {
   return (
-    <div className="relative w-full lg:h-64 rounded-md overflow-hidden  ">
+    <div className="relative w-full lg:h-96 rounded-md overflow-hidden  ">
       <img
-        src="/image/zenitsuF.gif"
+        src={image}
         alt="err"
         className="w-full h-full object-cover opacity-60"
       />

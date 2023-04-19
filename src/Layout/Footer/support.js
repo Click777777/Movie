@@ -1,6 +1,6 @@
 export const Links = [
   {
-    title: "Company",
+    title: "Pages",
     links: [
       {
         name: "Home",
@@ -17,28 +17,6 @@ export const Links = [
       {
         name: "Movies",
         link: "/movies",
-      },
-    ],
-  },
-
-  {
-    title: "Top Categories",
-    links: [
-      {
-        name: "Action",
-        link: "#",
-      },
-      {
-        name: "Romantic",
-        link: "#",
-      },
-      {
-        name: "Drama",
-        link: "#",
-      },
-      {
-        name: "Historical",
-        link: "#",
       },
     ],
   },
@@ -61,6 +39,20 @@ export const Links = [
       {
         name: "Change Password",
         link: "/password",
+      },
+    ],
+  },
+
+  {
+    title: "Registration ",
+    links: [
+      {
+        name: "Sign In",
+        link: "/login",
+      },
+      {
+        name: "Sign Up",
+        link: "/register",
       },
     ],
   },

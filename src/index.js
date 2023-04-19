@@ -5,12 +5,15 @@ import App from "./App";
 import "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter } from "react-router-dom";
+import PaginationContext from "./Context/PaginationContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <PaginationContext>
+        <App />
+      </PaginationContext>
     </BrowserRouter>
   </React.StrictMode>
 );

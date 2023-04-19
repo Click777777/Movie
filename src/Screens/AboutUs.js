@@ -1,13 +1,14 @@
 import React from "react";
 import Layout from "../Layout/Layout";
 import Footer from "../Layout/Footer/Footer";
-import Head from "../Components/Home/Head";
+import Head from "../Components/Head";
+import zinitsu from "../assist/zenitsuF.gif";
 
 const AboutUs = () => {
   return (
     <Layout>
-      <div className="min-h-screen container mx-auto px-2 my-6">
-        <Head title="About Us"></Head>
+      <div className="min-h-screen container mx-auto px-2 pt-20">
+        <Head title="About Us" image={zinitsu}></Head>
         <div className="px-4 py-10 xl:py-20">
           <div className="grid gap-4 items-center xl:grid-cols-2 xl:gap-16 ">
             <div>
