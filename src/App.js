@@ -22,7 +22,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     window.onload = () => {
-      setLoading(!loading);
+      setLoading((prev) => !prev);
     };
 
     AOS.init();
