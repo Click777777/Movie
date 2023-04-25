@@ -56,7 +56,11 @@ const Banner = () => {
                   <div className="absolute bottom-[10%] md:bottom-0 md:top-1/2 md:translate-y-[-30%] lg:translate-y-[-20%] px-2 lg:px-16 container left-1/2 translate-x-[-50%]">
                     <div className="max-w-[100%] xs:max-w-[80%] sm:max-w-[80%] md:max-w-[50%] flex flex-col gap-4 lg:gap-8">
                       <h1 className="text-base md:text-xl lg:text-3xl font-bold">
-                        {sliceData.title_english}
+                        {sliceData.title_english
+                          ? sliceData.title_english
+                          : sliceData.title
+                          ? sliceData.title
+                          : sliceData.title_japanese}
                       </h1>
                       <FlexMovieItem
                         type={sliceData.type}
