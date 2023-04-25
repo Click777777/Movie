@@ -29,7 +29,7 @@ const TopRated = () => {
   }, [setTopData]);
 
   return (
-    <div id="topRatedSection" className="my-10 mx-8">
+    <div id="topRatedSection" className="my-10 md:mx-8">
       <Title title="Top Rated Anime" Icon={BsCollectionPlayFill} />
       <div className="grid gap-3 md:gap-4 lg:gap-6 xl:gap-10  mt-6 grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 sm:mt-12">
         {topData === null

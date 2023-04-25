@@ -4,6 +4,7 @@ import { GiSandsOfTime } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const MovieTR = ({ arrData }) => {
+  console.log(arrData);
   const [inHover, setHover] = useState(false);
 
   return (
@@ -31,7 +32,11 @@ const MovieTR = ({ arrData }) => {
         </div>
         <div className="flex flex-col justify-between flex-auto py-4 px-2 h-24 md:h-28">
           <div className="text-white text-xs md:text-base line-clamp-2 !text-ellipsis">
-            {arrData.titles[0].title}
+            {arrData.title_english
+              ? arrData.title_english
+              : arrData.title
+              ? arrData.title
+              : arrData.title_japanese}
           </div>
           <div className="flex justify-between mt-1 select-none">
             <div className="flex space-x-2 items-start ">

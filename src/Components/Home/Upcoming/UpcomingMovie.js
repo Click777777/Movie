@@ -27,7 +27,7 @@ const PopularMovies = () => {
   }, []);
 
   return (
-    <div className=" mt-8 mx-8" id="Trend">
+    <div className=" mt-8 md:mx-8" id="Trend">
       <Title title="Comming Soon" Icon={BsCollectionFill} />
       <div className=" grid gap-10 relative">
         <Swiper
@@ -98,7 +98,11 @@ const PopularMovies = () => {
                       </div>
                       <div className="titleNo items-center justify-end space-y-4 px-2 bgTrend !hidden md:!flex !h-36 xs:!h-56 md:!h-56 lg:!h-64 xl:!h-80 2xl:!h-64">
                         <p className="rotate-180 text-base truncate">
-                          {data.title}
+                          {data.title_english
+                            ? data.title_english
+                            : data.title
+                            ? data.title
+                            : data.title_japanese}
                         </p>
                         <h2 className="wMode text-xl font-black text-subMain">
                           {index + 1}

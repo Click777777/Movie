@@ -45,7 +45,7 @@ const Movies = () => {
       {!data & !input && <Spinner />}
       {input ? (
         <>
-          <div className="min-h-screen container mx-auto px-8 pt-16 mb-16">
+          <div className="min-h-screen container mx-auto md:px-8 pt-16 mb-16">
             <div className="my-6 flex gap-4">
               <button
                 className="bg-subMain text-white rounded text-sm px-6 py-1"
@@ -81,7 +81,7 @@ const Movies = () => {
         </>
       ) : genRes ? (
         <>
-          <div className="min-h-screen container mx-auto px-8 pt-16 mb-16">
+          <div className="min-h-screen container mx-auto md:px-8 pt-16 mb-16">
             <div className="my-6 flex gap-4">
               <button
                 className="bg-subMain text-white rounded text-sm px-6 py-1"
@@ -118,7 +118,7 @@ const Movies = () => {
       ) : (
         <>
           {data && (
-            <div className="min-h-screen container mx-auto px-8 pt-16 mb-16">
+            <div className="min-h-screen container mx-auto md:px-8 pt-16 mb-16">
               <div className="my-6">
                 <button
                   className="bg-subMain text-white rounded text-sm px-6 py-1"

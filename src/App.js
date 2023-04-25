@@ -17,12 +17,12 @@ import FavouriteMovies from "./Screens/Dashboard/FavouriteMovies";
 import ViewMore from "./Components/ViewMore";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
   useEffect(() => {
     window.addEventListener("load", () => {
       setLoading(false);
     });
-  }, []);
+  }, [setLoading]);
 
   return (
     <>
