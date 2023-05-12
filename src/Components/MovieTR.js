@@ -4,7 +4,7 @@ import { GiSandsOfTime } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const MovieTR = ({ arrData }) => {
-  console.log(arrData);
+  // console.log(arrData);
   const [inHover, setHover] = useState(false);
 
   return (

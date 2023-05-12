@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Title from "./Title";
 import { FaUserFriends } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+// import { Autoplay } from "swiper";
 import axios from "axios";
 
 const MovieCast = ({ singleMovie }) => {
@@ -38,14 +38,14 @@ const MovieCast = ({ singleMovie }) => {
 
           <div className="mt-10">
             <Swiper
-              modules={[Autoplay]}
               spaceBetween={10}
-              loop={true}
-              speed={1000}
-              autoplay={{
-                delay: 1000,
-                disableOnInteraction: true,
-              }}
+              // modules={[Autoplay]}
+              // loop={true}
+              // speed={1000}
+              // autoplay={{
+              //   delay: 1000,
+              //   disableOnInteraction: true,
+              // }}
               breakpoints={{
                 0: {
                   slidesPerView: 2,

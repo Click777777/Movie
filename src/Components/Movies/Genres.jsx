@@ -34,9 +34,11 @@ const Genres = () => {
   };
 
   const clickHandler = async (id) => {
+    console.log(id);
     const res = await axios(
       `https://api.jikan.moe/v4/anime?genres=${id}&page=1&order_by=score&sort=desc`
     );
+    console.log(res);
     setInput(null);
     setSearchUrl(null);
     setClick(!click);

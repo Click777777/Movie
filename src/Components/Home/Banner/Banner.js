@@ -29,9 +29,9 @@ const Banner = () => {
       <Swiper
         loop={true}
         speed={1000}
-        direction={"vertical"}
         pagination={{
           clickable: true,
+          dynamicBullets: true,
         }}
         autoplay={{
           delay: 2500,
@@ -40,7 +40,7 @@ const Banner = () => {
         modules={[Pagination, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        className="w-full bg-dry h-[65vh]  sm:h-[70vh] md:h-[82vh]  2xl:h-[95vh]"
+        className="w-full bg-dry h-[65vh]  sm:h-[70vh] md:h-[82vh]  2xl:h-[95vh] "
       >
         {apiData
           ? apiData.data.slice(0, 10).map((sliceData, index) => (

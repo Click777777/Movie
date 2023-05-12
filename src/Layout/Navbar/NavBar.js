@@ -18,7 +18,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed bg-black backdrop-blur-sm z-10 top-0 w-full">
+    <div className="fixed bg-black backdrop-blur-sm z-10 top-0 w-full text-decoration-none ">
       <div className="container mx-auto p-4 grid gap-4 lg:gap-10 grid-cols-7 justify-between items-center ">
         <div className=" w-full col-span-4 md:col-span-2 ">
           <div className=" flex gap-4 items-center md:gap-8">

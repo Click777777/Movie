@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import Footer from "../Layout/Footer/Footer";
 import Layout from "../Layout/Layout";
 import { TfiVideoClapper } from "react-icons/tfi";
-import { FaPlay, FaHeart, FaCloudUploadAlt } from "react-icons/fa";
+import { FaPlay, FaHeart } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
 import { Context } from "../Context/PaginationContext";
 import errorImg from "../assist/errror404.jpg";
 
@@ -25,12 +26,12 @@ const WatchPage = () => {
               </p>
             </div>
 
-            <div className=" flex-btn gap-5 w-full sm:w-auto">
+            <div className="hidden  md:flex justify-between items-center gap-5 w-full sm:w-auto">
               <button className="bg-white bg-opacity-30 transition hover:text-subMain text-white text-sm px-4 py-3 rounded">
                 <FaHeart />
               </button>
               <button className="flex-rows gap-2 bg-subMain transition hover:text-main text-white text-sm px-4 py-3 rounded">
-                <FaCloudUploadAlt /> Download
+                <IoMdDownload /> Download
               </button>
             </div>
           </div>

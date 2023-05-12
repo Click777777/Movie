@@ -32,12 +32,12 @@ const PopularMovies = () => {
       <div className=" grid gap-10 relative">
         <Swiper
           spaceBetween={10}
-          loop={false}
-          speed={1000}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: true,
-          }}
+          // loop={false}
+          // speed={1000}
+          // autoplay={{
+          //   delay: 1000,
+          //   disableOnInteraction: true,
+          // }}
           navigation={true}
           modules={[Navigation, Autoplay]}
           pagination={{

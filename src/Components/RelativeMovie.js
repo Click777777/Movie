@@ -2,7 +2,7 @@ import React from "react";
 import Title from "./Title";
 import { BsCollectionFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+// import { Autoplay } from "swiper";
 import MovieTR from "./MovieTR";
 
 const RelativeMovie = ({ relatedMovie }) => {
@@ -13,14 +13,14 @@ const RelativeMovie = ({ relatedMovie }) => {
           <Title title="Related Movies" Icon={BsCollectionFill} />
           <div className="mt-10">
             <Swiper
-              modules={[Autoplay]}
               spaceBetween={10}
-              loop={false}
-              speed={1000}
-              autoplay={{
-                delay: 1000,
-                disableOnInteraction: true,
-              }}
+              // modules={[Autoplay]}
+              // loop={false}
+              // speed={1000}
+              // autoplay={{
+              //   delay: 1000,
+              //   disableOnInteraction: true,
+              // }}
               breakpoints={{
                 0: {
                   slidesPerView: 2,
