@@ -3,10 +3,11 @@ import { FaSearch } from "react-icons/fa";
 import axios from "axios";
 import { Context } from "../../Context/PaginationContext";
 import { useNavigate } from "react-router-dom";
+import Genres from "../../Components/Movies/Genres";
 
 const Search = ({ buttonFun }) => {
   const navigate = useNavigate();
-  const { input, setInput, setSearchUrl, setSearchCurrent } =
+  const { input, setInput, setSearchUrl, setSearchCurrent, setClick, click } =
     useContext(Context);
   const inputSearch = useRef();
   const [value, setValue] = useState("");
@@ -55,10 +56,14 @@ const Search = ({ buttonFun }) => {
     inputSearch.current.value = "";
   };
 
+  const clickHandler = () => {
+    setClick(!click);
+  };
+
   return (
     <>
       <form
-        className="container  mx-auto  text-sm bg-dryGray rounded flex-btn gap-4 "
+        className="container mx-auto text-sm bg-dryGray rounded flex-btn gap-4 "
         onSubmit={obSubmit}
       >
         <input
@@ -69,6 +74,14 @@ const Search = ({ buttonFun }) => {
           placeholder="Search Movie Name From Here"
           className="font-medium placeholder:text-border text-sm w-11/12 h-8 bg-transparent border-none p-6 text-black"
         />
+
+        <button
+          className="bg-subMain text-white rounded text-sm px-6 py-1"
+          onClick={clickHandler}
+        >
+          Filter
+        </button>
+        {click && <Genres />}
 
         <button
           type="submit"

@@ -126,7 +126,7 @@ const NavBar = () => {
               )}
             </div>
             {/* Login Button  */}
-            <button className=" py-2 px-3 bg-subMain rounded-sm text-xs text-white font-thin">
+            <button className=" py-2 px-3 bg-subMain rounded-sm text-sm font-medium text-white">
               <NavLink
                 to="/login"
                 className="2xl:text-base xl3:text-xl select-none"

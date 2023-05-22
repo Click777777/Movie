@@ -17,6 +17,8 @@ const PaginationContext = ({ children }) => {
   const [topData, setTopData] = useState(null);
   const [relatedMovie, setRelatedMovie] = useState(null);
 
+  console.log(input, genRes, data);
+
   return (
     <Context.Provider
       value={{

@@ -2,14 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import "../CssSwiper/popularMovie.css";
+// import "../CssSwiper/popularMovie.css";
 import { BsCollectionFill } from "react-icons/bs";
 import Title from "../../Title";
 import { Link } from "react-router-dom";
+import PreNextBTN from "./PreNextBTN";
 
 const PopularMovies = () => {
   const [apiData, setApiData] = useState(null);
@@ -29,20 +28,9 @@ const PopularMovies = () => {
   return (
     <div className=" mt-8 md:mx-8" id="Trend">
       <Title title="Comming Soon" Icon={BsCollectionFill} />
-      <div className=" grid gap-10 relative">
+      <div className="relative">
         <Swiper
           spaceBetween={10}
-          // loop={false}
-          // speed={1000}
-          // autoplay={{
-          //   delay: 1000,
-          //   disableOnInteraction: true,
-          // }}
-          navigation={true}
-          modules={[Navigation, Autoplay]}
-          pagination={{
-            clickable: true,
-          }}
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -93,7 +81,7 @@ const PopularMovies = () => {
                     <div className=" select-none flex items-end relative w-full border border-border  rounded-md overflow-hidden h-36 xs:!h-56 md:!h-56 lg:!h-64 xl:!h-80 2xl:!h-64">
                       <div className="absolute top-0 left-0 md:hidden p-2 bg-dry rounded">
                         <h2 className="wMode text-xs xs:text-base font-black text-subMain">
-                          {index}
+                          {index + 1}
                         </h2>
                       </div>
                       <div className="titleNo items-center justify-end space-y-4 px-2 bgTrend !hidden md:!flex !h-36 xs:!h-56 md:!h-56 lg:!h-64 xl:!h-80 2xl:!h-64">
@@ -118,6 +106,7 @@ const PopularMovies = () => {
                 </SwiperSlide>
               ))
             : null}
+          <PreNextBTN />
         </Swiper>
       </div>
     </div>

@@ -39,7 +39,6 @@ const Movies = () => {
     setSearchUrl(null);
     setCount(Math.ceil(data.pagination.items.total / 25));
   };
-
   return (
     <Layout>
       {!data & !input && <Spinner />}
@@ -124,7 +123,7 @@ const Movies = () => {
                   className="bg-subMain text-white rounded text-sm px-6 py-1"
                   onClick={clickHandler}
                 >
-                  Filter
+                  Filters
                 </button>
               </div>
               {/* {click && <Filters />} */}

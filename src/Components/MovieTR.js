@@ -23,7 +23,7 @@ const MovieTR = ({ arrData }) => {
             />
             {inHover && (
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-75 ">
-                <p className=" select-none flex justify-center items-center h-60 xs:h-72 sm:h-60 md:h-64 lg:h-72 xl:h-80 2xl:h-96 text-xs xs:text-base font-light text-white">
+                <p className=" text-subMain select-none flex justify-center items-center h-60 xs:h-72 sm:h-60 md:h-64 lg:h-72 xl:h-80 2xl:h-96 text-xs xs:text-base font-light ">
                   See More ...
                 </p>
               </div>

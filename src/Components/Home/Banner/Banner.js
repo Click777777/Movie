@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { Link } from "react-router-dom";
-import "swiper/css";
-import "swiper/css/pagination";
 import axios from "axios";
 import FlexMovieItem from "../../FlexMovieItem";
-import { MdSlideshow } from "react-icons/md";
 
 const Banner = () => {
   const [apiData, setApiData] = useState(0);
@@ -53,8 +50,8 @@ const Banner = () => {
                 <div className="gradinetImg absolute h-full w-full bottom-0"></div>
                 {/* about Movie */}
                 <div className="top-0 bottom-0 left-0 right-0 bg-opacity-40 absolute bg-main  ">
-                  <div className="absolute bottom-[10%] md:bottom-0 md:top-1/2 md:translate-y-[-30%] lg:translate-y-[-20%] px-2 lg:px-16 container left-1/2 translate-x-[-50%]">
-                    <div className="max-w-[100%] xs:max-w-[80%] sm:max-w-[80%] md:max-w-[50%] flex flex-col gap-4 lg:gap-8">
+                  <div className="absolute bottom-[8%] md:top-1/2 md:translate-y-[-30%] lg:translate-y-[-20%] px-2 lg:px-16 container left-1/2 translate-x-[-50%]">
+                    <div className="max-w-[100%] xs:max-w-[80%] sm:max-w-[80%] md:max-w-[68%] flex flex-col gap-4 lg:gap-8">
                       <h1 className="text-base md:text-xl lg:text-3xl font-bold">
                         {sliceData.title_english
                           ? sliceData.title_english
@@ -66,9 +63,10 @@ const Banner = () => {
                         type={sliceData.type}
                         duration={sliceData.duration}
                         date={sliceData.aired.from}
+                        score={sliceData.score}
                         rating={sliceData.rating}
                       />
-                      <p className="font-extralight text-sm md:text-sm lg:text-base opacity-90 line-clamp-2 tracking-wider ">
+                      <p className="font-extralight text-sm md:text-sm lg:text-base opacity-90 line-clamp-3 tracking-wider ">
                         {sliceData.synopsis}
                       </p>
                       <div className="flex items-center gap-5">
@@ -77,7 +75,6 @@ const Banner = () => {
                           className="bg-subMain hover:text-main transition text-white px-3 py-2 lg:px-5 rounded-md lg:rounded-3xl font-meduium text-xs sm:text-sm"
                         >
                           <div className="flex-rows gap-2">
-                            <MdSlideshow />
                             <p className=" text-[10px] lg:text-sm">Watch Now</p>
                           </div>
                         </Link>

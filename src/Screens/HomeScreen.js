@@ -4,7 +4,6 @@ import TopRated from "../Components/Home/TopRated/TopRated";
 import Footer from "../Layout/Footer/Footer";
 import Layout from "../Layout/Layout";
 import Banner from "../Components/Home/Banner/Banner";
-import Promos from "../Components/Home/Promo/Promos";
 
 const HomeScreen = () => {
   return (
@@ -13,7 +12,6 @@ const HomeScreen = () => {
         <Banner />
         <UpcomingMovie />
         <TopRated />
-        <Promos />
         <div className="w-full hidden lg:inline-block">
           <Footer></Footer>
         </div>

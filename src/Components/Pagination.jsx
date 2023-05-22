@@ -72,17 +72,17 @@ const Pagination = () => {
       ? fetchData(setTopData)
       : fetchData(setData);
   }, [
-    searchUrl,
-    setData,
-    setInput,
-    setCount,
-    genRes,
     currentPage,
+    genRes,
     genresCurrent,
     searchCurrent,
+    searchUrl,
+    setCount,
+    setData,
+    setInput,
+    setTopData,
     topData,
     topRatedCurrent,
-    setTopData,
   ]);
 
   const fetchDataSec = async (value) => {
@@ -94,6 +94,7 @@ const Pagination = () => {
       : topData
       ? (url = `https://api.jikan.moe/v4/top/anime?&page=${value}`)
       : (url = `https://api.jikan.moe/v4/anime?page=${value}`);
+
     const response = await axios.get(url);
     return response.data;
   };

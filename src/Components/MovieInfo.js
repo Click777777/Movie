@@ -2,7 +2,6 @@ import React from "react";
 import FlexMovieItem from "./FlexMovieItem";
 import { FaShareAlt } from "react-icons/fa";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import { FaPlay } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const MovieInfo = ({ singleMovie, myPath }) => {
@@ -79,7 +78,6 @@ const MovieInfo = ({ singleMovie, myPath }) => {
                       to={myPath}
                       className=" gap-4 flex-rows w-40 bg-dry border-subMain text-white transitions border hover:text-subMain hover:border-white rounded-full py-2 sm:py-3"
                     >
-                      <FaPlay />
                       <div className=" w3 h-3 mb-2"> Watch</div>
                     </Link>
                   </div>
@@ -105,7 +103,6 @@ const MovieInfo = ({ singleMovie, myPath }) => {
                         to={myPath}
                         className=" space-x-4 w-full flex-rows bg-dry border-subMain text-white transitions border hover:text-subMain hover:border-white rounded-full py-2 sm:py-3"
                       >
-                        <FaPlay />
                         <div className=" w3 h-3 mb-2"> Watch</div>
                       </Link>
                     </div>
