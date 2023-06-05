@@ -1,51 +1,37 @@
 export const Links = [
   {
-    title: "Pages",
+    title: "TV & Series",
     links: [
       {
         name: "Home",
         link: "/",
       },
       {
-        name: "About Us",
+        name: "Movie",
+        link: "/movie",
+      },
+      {
+        name: "Series",
+        link: "/series",
+      },
+      {
+        name: "Search",
+        link: "/search",
+      },
+    ],
+  },
+
+  {
+    title: "Info & Registration",
+    links: [
+      {
+        name: "About",
         link: "/about-us",
       },
       {
-        name: "Contact Us",
+        name: "Contact",
         link: "/contact-us",
       },
-      {
-        name: "Movies",
-        link: "/movies",
-      },
-    ],
-  },
-
-  {
-    title: "My Account",
-    links: [
-      {
-        name: "Dashboard",
-        link: "/dashboard",
-      },
-      {
-        name: "My Favourites",
-        link: "/favourite",
-      },
-      {
-        name: "Profile",
-        link: "/profile",
-      },
-      {
-        name: "Change Password",
-        link: "/password",
-      },
-    ],
-  },
-
-  {
-    title: "Registration ",
-    links: [
       {
         name: "Sign In",
         link: "/login",

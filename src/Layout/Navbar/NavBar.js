@@ -1,35 +1,26 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaUser, FaHeart } from "react-icons/fa";
-import { ImSearch } from "react-icons/im";
-import { AiOutlineClose } from "react-icons/ai";
-import Search from "./Search";
+import useProgressScroll from "../../CustomHook/useProgressScroll";
 
 const NavBar = () => {
-  const [showSearchBar, setShowSearchBar] = useState(true);
-  const [closeSearchBar, setCloseSearchBar] = useState(false);
+  const { completion } = useProgressScroll();
   const [menu, setMenu] = useState(false);
   const hover = "hover:text-subMain transitions text-white";
-  const Hover = ({ isActive }) => (isActive ? "text-subMain" : hover);
-
-  const buttonFun = () => {
-    setShowSearchBar(!showSearchBar);
-    setCloseSearchBar(!closeSearchBar);
-  };
+  const Hover = ({ isActive }) => (isActive ? "text-subMain border-b" : hover);
 
   return (
-    <div className="fixed bg-black backdrop-blur-sm z-10 top-0 w-full text-decoration-none ">
-      <div className="container mx-auto p-4 grid gap-4 lg:gap-10 grid-cols-7 justify-between items-center ">
-        <div className=" w-full col-span-4 md:col-span-2 ">
-          <div className=" flex gap-4 items-center md:gap-8">
+    <div className="text-decoration-none fixed top-0 z-10 w-full bg-black backdrop-blur-sm ">
+      <div className="container mx-auto grid grid-cols-7 items-center justify-between gap-4 p-4 lg:gap-10 ">
+        <div className=" col-span-3 w-full md:col-span-2 ">
+          <div className=" flex items-center gap-4 md:gap-8">
             {/* Mobile Menu */}
             <div
-              className="space-y-1 cursor-pointer flex flex-col items-end md:hidden"
+              className="flex cursor-pointer flex-col items-end space-y-1 md:hidden"
               onClick={() => setMenu((prev) => !prev)}
             >
-              <div className="h-1 w-6 bg-white rounded"></div>
-              <div className="h-1 w-6 bg-white rounded"></div>
-              <div className="h-1 w-6 bg-white rounded"></div>
+              <div className="h-1 w-6 rounded bg-white"></div>
+              <div className="h-1 w-6 rounded bg-white"></div>
+              <div className="h-1 w-6 rounded bg-white"></div>
             </div>
 
             <div className={menu ? "showMenu" : "hideMenu"}>
@@ -38,7 +29,7 @@ const NavBar = () => {
                 onClick={() => setMenu(false)}
               >
                 <svg
-                  className="h-8 w-8 text-dryGray cursor-pointer"
+                  className="h-8 w-8 cursor-pointer text-dryGray"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -50,23 +41,33 @@ const NavBar = () => {
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               </div>
-              <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                <li className="border-b border-gray-400 my-8 uppercase">
+              <ul className="flex min-h-[250px] flex-col items-center justify-between gap-y-8">
+                <li className="  border-gray-400 uppercase">
                   <NavLink className={Hover} to="/">
                     Home
                   </NavLink>
                 </li>
-                <li className="border-b border-gray-400 my-8 uppercase">
-                  <NavLink className={Hover} to="/movies">
+                <li className="  border-gray-400 uppercase">
+                  <NavLink className={Hover} to="/search">
+                    search
+                  </NavLink>
+                </li>
+                <li className="  border-gray-400 uppercase">
+                  <NavLink className={Hover} to="/movie">
                     Movie
                   </NavLink>
                 </li>
-                <li className="border-b border-gray-400 my-8 uppercase">
+                <li className="  border-gray-400 uppercase">
+                  <NavLink className={Hover} to="/series">
+                    series
+                  </NavLink>
+                </li>
+                <li className="  border-gray-400 uppercase">
                   <NavLink className={Hover} to="/about-us">
                     About
                   </NavLink>
                 </li>
-                <li className="border-b border-gray-400 my-8 uppercase">
+                <li className="  border-gray-400 uppercase">
                   <NavLink className={Hover} to="/contact-us">
                     Contact
                   </NavLink>
@@ -75,10 +76,10 @@ const NavBar = () => {
             </div>
 
             {/* First Item (Logo)*/}
-            <div className="w-full">
+            <div className="min-w-[100px]">
               <Link
                 to="/"
-                className=" text-subMain text-lg tracking-wider font-bold select-none"
+                className=" select-none text-base font-bold tracking-wider text-subMain md:text-lg"
               >
                 MOVIE | HV
               </Link>
@@ -87,63 +88,63 @@ const NavBar = () => {
         </div>
 
         {/* Third Item (Nav Link) */}
-        <div className="w-full col-span-3 font-medium text-sm hidden justify-between items-center md:flex ">
-          <NavLink to="/movies" className={Hover}>
-            <p className="2xl:text-base xl3:text-xl select-none">Movies</p>
+        <div className="col-span-3 hidden w-full items-center justify-between text-sm font-medium md:flex ">
+          <NavLink to="/search" className={Hover}>
+            <p className="select-none capitalize 2xl:text-base xl3:text-xl">
+              search
+            </p>
+          </NavLink>
+          <NavLink to="/movie" className={Hover}>
+            <p className="select-none capitalize 2xl:text-base xl3:text-xl">
+              movie
+            </p>
+          </NavLink>
+          <NavLink to="/series" className={Hover}>
+            <p className="select-none capitalize 2xl:text-base xl3:text-xl">
+              series
+            </p>
           </NavLink>
           <NavLink to="/about-us" className={Hover}>
-            <p className="2xl:text-base xl3:text-xl select-none">About Us</p>
+            <p className="select-none capitalize 2xl:text-base xl3:text-xl">
+              about
+            </p>
           </NavLink>
           <NavLink to="/contact-us" className={Hover}>
-            <p className="2xl:text-base xl3:text-xl select-none">Contact Us</p>
-          </NavLink>
-          <NavLink to="/profile" className={Hover}>
-            <FaUser className="w-5 h-5" />
-          </NavLink>
-          <NavLink to="/favourite" className={`${Hover} relative select-none`}>
-            <FaHeart className="w-5 h-5" />
-            <div className="bg-subMain w-5 h-5 flex-rows absolute -top-5 -right-3 rounded-full">
-              <p className=" text-xs pr-[2px]">25</p>
-            </div>
+            <p className="select-none capitalize 2xl:text-base xl3:text-xl">
+              contact
+            </p>
           </NavLink>
         </div>
 
-        <div className=" w-full col-span-3 md:col-span-2">
-          <div className=" flex items-center justify-end gap-4 md:gap-8 ">
-            {/* Second Item (Search bar) */}
-            <div className="col-span-1 lg:col-span-3 flex justify-end">
-              {showSearchBar && (
-                <ImSearch
-                  className=" select-none"
-                  onClick={() => buttonFun()}
-                />
-              )}
-              {closeSearchBar && (
-                <AiOutlineClose
-                  className="select-none"
-                  onClick={() => buttonFun()}
-                />
-              )}
-            </div>
-            {/* Login Button  */}
-            <button className=" py-2 px-3 bg-subMain rounded-sm text-sm font-medium text-white">
+        <div className=" col-span-4 w-full md:col-span-2">
+          <div className=" flex items-center justify-end gap-4 md:gap-6 ">
+            {/* Login Button & singup  */}
+            <button className=" py-2 px-3 text-sm font-medium text-white">
               <NavLink
                 to="/login"
-                className="2xl:text-base xl3:text-xl select-none"
+                className="select-none capitalize 2xl:text-base xl3:text-xl"
               >
-                Log In
+                login
+              </NavLink>
+            </button>
+
+            <button className=" rounded-sm bg-subMain py-2 px-3 text-xs font-semibold text-white">
+              <NavLink
+                to="/singup"
+                className="select-none capitalize 2xl:text-base xl3:text-xl"
+              >
+                sing up
               </NavLink>
             </button>
           </div>
         </div>
       </div>
-      {closeSearchBar && (
-        <div className=" w-full pb-2 px-2 md:px-4 md:pb-4">
-          <div className=" bg-gray-900 p-6 rounded-sm min-h-[100vh] ">
-            <Search buttonFun={buttonFun} />
-          </div>
-        </div>
-      )}
+
+      {/* progressBar */}
+      <span
+        className="absolute bottom-0 h-1 w-full bg-subMain"
+        style={{ transform: `translateX(${completion - 100}%)` }}
+      />
     </div>
   );
 };

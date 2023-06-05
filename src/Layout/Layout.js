@@ -5,12 +5,10 @@ import NavBar from "./Navbar/NavBar";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="bg-main text-white relative min-h-screen">
+      <div className=" relative flex min-h-screen flex-col justify-between bg-main text-white">
         <NavBar />
         {children}
-        <div className=" lg:hidden">
-          <Footer></Footer>
-        </div>
+        <Footer></Footer>
       </div>
     </>
   );

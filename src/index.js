@@ -5,15 +5,18 @@ import App from "./App";
 import "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter } from "react-router-dom";
-import PaginationContext from "./Context/PaginationContext";
+import GenreFilterContext from "./Context/GenreFilterContext";
+import SearchContext from "./Context/SearchContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <PaginationContext>
-        <App />
-      </PaginationContext>
+      <SearchContext>
+        <GenreFilterContext>
+          <App />
+        </GenreFilterContext>
+      </SearchContext>
     </BrowserRouter>
   </React.StrictMode>
 );

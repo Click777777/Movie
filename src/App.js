@@ -3,17 +3,16 @@ import AboutUs from "./Screens/AboutUs";
 import HomeScreen from "./Screens/HomeScreen";
 import NotFound from "./Screens/NotFound";
 import ContactUs from "./Screens/ContactUs";
-import Movies from "./Screens/Movies";
-import SingleMovie from "./Screens/SingleMovie";
 import ScrollTop from "./Components/AutoScrollTop";
-import WatchPage from "./Screens/WatchPage";
 import Login from "./Screens/Login";
 import Register from "./Screens/Register";
-import Profile from "./Screens/Dashboard/Profile";
 import "aos/dist/aos.css";
-import Password from "./Screens/Dashboard/Password";
-import FavouriteMovies from "./Screens/Dashboard/FavouriteMovies";
-import ViewMore from "./Components/ViewMore";
+import Search from "./Screens/Search";
+import Movie from "./Screens/Movie";
+import Series from "./Screens/Series";
+import Filter from "./Layout/Navbar/Fiter/Filter";
+import SearchName from "./Layout/Navbar/Search/SearchName";
+import Detail from "./Components/Detail/Detail";
 
 function App() {
   return (
@@ -22,20 +21,17 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/home" element={<HomeScreen />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/anime/filter" element={<Filter />} />
+        <Route path="/anime/search" element={<SearchName />} />
+        <Route path="anime/detail/:id" element={<Detail />} />
+        <Route path="/movie" element={<Movie />} />
+        <Route path="/series" element={<Series />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/singup" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/404Error" element={<NotFound />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/password" element={<Password />} />
-        <Route path="/favourite" element={<FavouriteMovies />} />
-        <Route path="/viewMore" element={<ViewMore />} />
-
-        <Route path="/movies/:id" element={<SingleMovie />} />
-        <Route path="/watch/:id" element={<WatchPage />} />
-
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

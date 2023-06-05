@@ -1,10 +1,10 @@
 import React from "react";
-import CircleLoader from "react-spinners/CircleLoader";
+import { BeatLoader } from "react-spinners";
 
-const Spinner = ({ loading = true }) => {
+const Spinner = () => {
   return (
-    <div className=" w-full h-screen flex-colo bg-main">
-      <CircleLoader loading={loading} color="#ff0000" size={100} />
+    <div className="mt-8 text-center">
+      <BeatLoader color="#FFB000" cssOverride={{}} margin={5} size={10} />
     </div>
   );
 };
