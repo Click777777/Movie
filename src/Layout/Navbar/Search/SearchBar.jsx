@@ -114,7 +114,7 @@ const SearchBar = () => {
         <div className="absolute top-[72px] z-10 flex w-full flex-col gap-y-4 bg-black p-4">
           {renderData.slice(0, 5).map((item) => (
             <Link
-              to={`anime/detail/${item.mal_id}`}
+              to={`/anime/detail/${item.mal_id}`}
               key={item.mal_id}
               className="flex w-full items-center space-x-4"
             >
@@ -153,6 +153,10 @@ const SearchBar = () => {
           >
             view all results
           </div>
+        </div>
+      ) : typeData !== "" ? (
+        <div className="container p-4 text-center capitalize text-subMain">
+          loading...
         </div>
       ) : null}
     </>
