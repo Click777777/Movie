@@ -31,19 +31,19 @@ select:focus {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .description {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* tailwind custom classes */
 .flex-colo {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col items-center justify-center;
 }
 .flex-rows {
-  @apply flex flex-row justify-center items-center;
+  @apply flex flex-row items-center justify-center;
 }
 .flex-btn {
-  @apply flex justify-between items-center;
+  @apply flex items-center justify-between;
 }
 .transitions {
   @apply transition duration-300 ease-in;
@@ -56,8 +56,8 @@ select:focus {
   @apply flex-colo;
 }
 
-.bgColor{
-  background: linear-gradient(180deg,#080A1A 0,rgba(74,75,81,0) 99%);
+.bgColor {
+  background: linear-gradient(180deg, #080a1a 0, rgba(74, 75, 81, 0) 99%);
 }
 
 .page-item .page-link {
@@ -98,7 +98,7 @@ select:focus {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #080A1A;
+  background: #080a1a;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -108,15 +108,17 @@ select:focus {
 
 .ribbon {
   position: absolute;
-  left: -4px; top: -4px;
+  left: -4px;
+  top: -4px;
   z-index: 1;
   overflow: hidden;
-  width: 75px; height: 75px;
+  width: 75px;
+  height: 75px;
   text-align: right;
 }
 .ribbon span {
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
@@ -124,28 +126,33 @@ select:focus {
   -webkit-transform: rotate(-45deg);
   width: 100px;
   display: block;
-  background: linear-gradient(#F79E05 0%, #8F5408 100%);
+  background: linear-gradient(#f79e05 0%, #8f5408 100%);
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 19px; left: -21px;
+  top: 22px;
+  left: -19px;
 }
 .ribbon span::before {
   content: "";
-  position: absolute; left: 0px; top: 100%;
+  position: absolute;
+  left: 0px;
+  top: 100%;
   z-index: -1;
-  border-left: 3px solid #8F5408;
+  border-left: 3px solid #8f5408;
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid #8F5408;
+  border-top: 3px solid #8f5408;
 }
 .ribbon span::after {
   content: "";
-  position: absolute; right: 0px; top: 100%;
+  position: absolute;
+  right: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
-  border-right: 3px solid #8F5408;
+  border-right: 3px solid #8f5408;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid #8F5408;
+  border-top: 3px solid #8f5408;
 }
 
 .loader {
@@ -156,24 +163,24 @@ select:focus {
   height: 48px;
   color: #fff;
 }
-  .loader:before,
-  .loader:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    transform: rotateX(70deg);
-    animation: 1s spin linear infinite;
-  }
-  .loader:after {
-    color: #FF3D00;
-    transform: rotateY(70deg);
-    animation-delay: .4s;
-  }
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #ff3d00;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
 
 @keyframes rotate {
   0% {
@@ -196,27 +203,27 @@ select:focus {
 @keyframes spin {
   0%,
   100% {
-    box-shadow: .2em 0px 0 0px currentcolor;
+    box-shadow: 0.2em 0px 0 0px currentcolor;
   }
   12% {
-    box-shadow: .2em .2em 0 0 currentcolor;
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
   }
   25% {
-    box-shadow: 0 .2em 0 0px currentcolor;
+    box-shadow: 0 0.2em 0 0px currentcolor;
   }
   37% {
-    box-shadow: -.2em .2em 0 0 currentcolor;
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
   }
   50% {
-    box-shadow: -.2em 0 0 0 currentcolor;
+    box-shadow: -0.2em 0 0 0 currentcolor;
   }
   62% {
-    box-shadow: -.2em -.2em 0 0 currentcolor;
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
   }
   75% {
-    box-shadow: 0px -.2em 0 0 currentcolor;
+    box-shadow: 0px -0.2em 0 0 currentcolor;
   }
   87% {
-    box-shadow: .2em -.2em 0 0 currentcolor;
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }

@@ -38,7 +38,7 @@ export const Links = [
       },
       {
         name: "Sign Up",
-        link: "/register",
+        link: "/singup",
       },
     ],
   },

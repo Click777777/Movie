@@ -16,9 +16,7 @@ const MovieTR = ({ arrData }) => {
 
       {/* Ribbon  */}
       <div className="ribbon">
-        <span className=" text-[8px] xs:text-[9px]">
-          {arrData.airing ? "on going" : "complete"}
-        </span>
+        <span className=" text-[7px] xs:text-[8px]">{arrData.status}</span>
       </div>
       {/* type TV or Series */}
       <div className=" absolute top-0 right-0 rounded-l-sm bg-border px-2">

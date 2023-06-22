@@ -45,7 +45,7 @@ const Movie = () => {
                 hasMore={data.pagination.has_next_page}
                 loader={data.pagination.has_next_page ? <Spinner /> : null}
               >
-                <div className="mt-6 grid grid-cols-2 gap-3 xs:grid-cols-2  sm:mt-12 sm:grid-cols-3 md:grid-cols-4 md:gap-4 lg:grid-cols-5 lg:gap-6 xl:grid-cols-5 xl:gap-10 2xl:grid-cols-6">
+                <div className="mt-6 grid grid-cols-2 gap-8 xs:grid-cols-3 sm:mt-12 sm:grid-cols-3 md:grid-cols-4 md:gap-6 lg:grid-cols-5 lg:gap-8 xl:grid-cols-5 xl:gap-11 2xl:grid-cols-6">
                   {loading
                     ? null
                     : storedData.map((data, index) => (

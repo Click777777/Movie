@@ -11,9 +11,10 @@ import useFetch from "../../../CustomHook/useFetch";
 const PopularMovies = () => {
   const url = "https://api.jikan.moe/v4/seasons/upcoming";
   const { data } = useFetch(url);
+  console.log("🚀 ~ file: UpcomingMovie.js:14 ~ PopularMovies ~ data:", data);
 
   return (
-    <div className=" mt-8 md:mx-8" id="Trend">
+    <section className="mx-4 mt-8 md:mx-8" id="Trend">
       <Title title="upcoming next season" Icon={BsCollectionFill} />
       <div className="relative">
         <Swiper
@@ -99,7 +100,7 @@ const PopularMovies = () => {
           <PreNextBTN />
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

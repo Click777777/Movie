@@ -11,7 +11,7 @@ const Filter = () => {
   const [storedData, setStoredData] = useState([]);
   const [page, setPage] = useState(1);
   const [fetch, setFetch] = useState(false);
-  const { state, state1 } = useContext(Context);
+  const { state, state1, isSelect } = useContext(Context);
 
   const baseUrl = "https://api.jikan.moe/v4/genres/anime";
   const { data: genre } = useFetch(baseUrl);
@@ -72,6 +72,7 @@ const Filter = () => {
             storedData={storedData}
             data={data}
             title={"filter by"}
+            isGenre={isSelect}
           />
         ) : (
           genreById !== "" && (

@@ -6,7 +6,6 @@ import ContactUs from "./Screens/ContactUs";
 import ScrollTop from "./Components/AutoScrollTop";
 import Login from "./Screens/Login";
 import Register from "./Screens/Register";
-import "aos/dist/aos.css";
 import Search from "./Screens/Search";
 import Movie from "./Screens/Movie";
 import Series from "./Screens/Series";

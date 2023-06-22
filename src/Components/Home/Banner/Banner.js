@@ -10,7 +10,10 @@ const Banner = () => {
   const { data } = useFetch(url);
 
   return (
-    <div className={`flex w-full flex-col justify-between space-y-4 pt-[64px]`}>
+    <section
+      id="banner"
+      className={`flex w-full flex-col justify-between space-y-4 pt-[64px]`}
+    >
       <Swiper
         loop={true}
         speed={1000}
@@ -84,7 +87,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
