@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MovieTR = ({ arrData }) => {
   return (
-    <div className="relative overflow-hidden rounded transition-all ">
+    <div className="relative overflow-hidden rounded transition-all">
       <div className=" relative cursor-pointer pb-[141%]">
         <Link to={`/anime/detail/${arrData.mal_id}`}>
           <img
@@ -25,7 +25,7 @@ const MovieTR = ({ arrData }) => {
         </span>
       </div>
 
-      <div className="text-sm line-clamp-2 xs:text-base">
+      <div className="mt-4 text-sm line-clamp-2 xs:text-base">
         {arrData.title_english
           ? arrData.title_english
           : arrData.title
