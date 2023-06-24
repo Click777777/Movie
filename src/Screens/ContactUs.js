@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import Footer from "../Layout/Footer/Footer";
 import { FiPhoneCall, FiMapPin, FiMail } from "react-icons/fi";
 import sukuna from "../assist/My project-2.png";
 import Head from "../Components/Head";
@@ -31,20 +30,20 @@ const ContactUs = () => {
   ];
   return (
     <Layout>
-      <div className="min-h-screen container mx-auto px-2 pt-20">
+      <div className="container mx-auto min-h-screen px-2 pt-20">
         <Head title="Contact Us" image={sukuna}></Head>
 
-        <div className="grid gap-6 my-10 md:grid-cols-2 lg:grid-cols-3 lg:my-20 xl:gap-8">
+        <div className="my-10 grid gap-6 md:grid-cols-2 lg:my-20 lg:grid-cols-3 xl:gap-8">
           {data.map((i) => (
             <div
               key={i.id}
-              className="flex-colo p-10 bg-dry border border-border rounded-lg text-center"
+              className="flex-colo rounded-lg border border-border bg-dry p-10 text-center"
             >
-              <span className="flex-colo w-20 h-20 mb-4 rounded-full bg-main text-subMain text-2xl">
+              <span className="flex-colo mb-4 h-20 w-20 rounded-full bg-main text-2xl text-subMain">
                 <i.icon />
               </span>
-              <h5 className="text-xl font-semibold mb-2">{i.title}</h5>
-              <p className="text-sm text-text leading-7 mb-0">
+              <h5 className="mb-2 text-xl font-semibold">{i.title}</h5>
+              <p className="mb-0 text-sm leading-7 text-text">
                 <a href={`mailto:{i.contact}`} className="text-blue-600">
                   {i.contact}
                 </a>
@@ -54,9 +53,6 @@ const ContactUs = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="w-full hidden lg:inline-block">
-        <Footer></Footer>
       </div>
     </Layout>
   );

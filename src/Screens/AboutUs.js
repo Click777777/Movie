@@ -1,16 +1,15 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import Footer from "../Layout/Footer/Footer";
 import Head from "../Components/Head";
 import zinitsu from "../assist/zenitsuF.gif";
 
 const AboutUs = () => {
   return (
     <Layout>
-      <div className="min-h-screen container mx-auto px-2 pt-20">
+      <div className="container mx-auto min-h-screen px-2 pt-20">
         <Head title="About Us" image={zinitsu}></Head>
         <div className="px-4 py-10 xl:py-20">
-          <div className="grid gap-4 items-center xl:grid-cols-2 xl:gap-16 ">
+          <div className="grid items-center gap-4 xl:grid-cols-2 xl:gap-16 ">
             <div>
               <div>
                 <h3 className="mb-4 text-xl font-semibold lg:text-3xl">
@@ -37,20 +36,20 @@ const AboutUs = () => {
                   dolores accusamus similique necessitatibus reiciendis vitae?
                 </p>
               </div>
-              <div className="grid gap-6 mt-8 md:grid-cols-2">
-                <div className="p-8 bg-dry rounded-lg">
-                  <span className="text-3xl font-extrabold block">10K</span>
-                  <h4 className="text-lg font-semibold my-2">Listed Movies</h4>
-                  <p className="text-text leading-7 text-sm mb-0">
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                <div className="rounded-lg bg-dry p-8">
+                  <span className="block text-3xl font-extrabold">10K</span>
+                  <h4 className="my-2 text-lg font-semibold">Listed Movies</h4>
+                  <p className="mb-0 text-sm leading-7 text-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Sapiente doloremque ipsa id provident reiciendis molestiae
                     culpa error nemo.
                   </p>
                 </div>
-                <div className="p-8 bg-dry rounded-lg">
-                  <span className="text-3xl font-extrabold block">8K</span>
-                  <h4 className="text-lg font-semibold my-2">Lovely User</h4>
-                  <p className="text-text leading-7 text-sm mb-0">
+                <div className="rounded-lg bg-dry p-8">
+                  <span className="block text-3xl font-extrabold">8K</span>
+                  <h4 className="my-2 text-lg font-semibold">Lovely User</h4>
+                  <p className="mb-0 text-sm leading-7 text-text">
                     Complete free,without registeration!
                   </p>
                 </div>
@@ -58,16 +57,13 @@ const AboutUs = () => {
             </div>
             <div className="mt-10 lg:mt-0">
               <img
-                src="/image/zenitsuS.gif"
+                src="/image/aboutZen.gif"
                 alt="err"
-                className="w-full object-cover rounded-lg hidden xl:block "
+                className="hidden w-full rounded-lg object-cover xl:block "
               />
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full hidden lg:inline-block">
-        <Footer></Footer>
       </div>
     </Layout>
   );
